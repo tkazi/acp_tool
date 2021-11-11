@@ -82,9 +82,16 @@ body, html {
   background: #538c53;
   color: white;
   border: none;
-  //border-radius: 4px;
   display: flex;
   justify-content: center;
+}
+
+.panel-select{
+  padding-right: 65px;
+}
+
+.right-container  select option {
+  background: none;
 }
 
 .right-panel-main-container{
@@ -93,23 +100,39 @@ body, html {
 
 .right-container {
   padding: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  margin-top: 8px;
 }
 
 .right-container label{
   font-size: 0.9em;
 }
 
-.right-container .MuiFormControl-root {
+.dropdown-container{
   width: 25%;
   margin: 0 12px;
-  
+  display: inline-block;
+}
+
+.color-container{
+  display: inline-block;
+  margin-left: 40px;
+  width: 400px;
+  height: 60px;
+  position: relative;
+}
+
+#dropdown-color-container{
+  vertical-align: top;
+  margin-top: 18px;
+  margin-left: 4px;
 }
 
 .right-input-container{
   margin: 10px 0;
   padding: 10px 20px;
   font-size: 0.9em;
+  border: 1px solid #ccc;
 }
 
 .right-input-container .heading {
@@ -129,6 +152,10 @@ body, html {
   margin-top: 20px;
 }
 
+.panel-container p:hover{
+  cursor: pointer;
+}
+
 .panel-container .active{
   background: #538c53;
   color: white;
@@ -140,11 +167,21 @@ hr {
   margin: 0;
   position: relative;
   left: 20px;
-  border: 1px solid #eee;
+  /* border: 1px solid #eee; */
+  border: none;
 }
 
 .colors p{
-  background: red;
-  width: 2%;
-  height: 2%;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-right: 10px;;
+}
+
+.colors p:hover{
+  cursor: pointer;
+}
+
+.colors .active{
+  border: 2px solid #3e3e3e;
 }
