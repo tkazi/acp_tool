@@ -1,6 +1,13 @@
 import React from 'react'
 
 export default function PricingPanel() {
+
+
+    function sendEmail(){
+        
+    }
+
+
     return (
         <div>
             <div class="logo-container">
@@ -12,8 +19,9 @@ export default function PricingPanel() {
             <div class="input-container">
                 <input class="input-name" placeholder="Name"/>
                 <input class="input-email" placeholder="Email"/>
-                <button>Request Quote</button>
+                <button onClick={sendEmail()}>Request Quote</button>
             </div>
         </div>
     )
 }
+
