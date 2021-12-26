@@ -157,45 +157,47 @@ export default function ColorPanel() {
                     />
                     {/* <p>{selectColor}</p> */}
                 </div>
-                <div class="color-container">
+                <div className="color-container">
                      
-        
-
-
-                    { selectColor == 'orange' ?
+    
+                    { selectColor === 'orange' ?
                         orange_colors.map((color, i) => (
                             <p 
-                            className= {i == isActive.activeIndex ? "active" : "inactive"}
+                            key = {color.hex}
+                            className= {i === isActive.activeIndex ? "active" : "inactive"}
                             style={{backgroundColor: color.hex}}
                             onClick = {e => setIsActive({activeIndex: i})}
                             ></p>
                         ))
                     :null}
 
-                    { selectColor == 'green' ?
+                    { selectColor === 'green' ?
                         green_colors.map((color, i) => (
                             <p 
-                            className= {i == isActive.activeIndex ? "active" : "inactive"}
+                            key = {color.hex}
+                            className= {i === isActive.activeIndex ? "active" : "inactive"}
                             style={{backgroundColor: color.hex}}
                             onClick = {e => setIsActive({activeIndex: i})}
                             ></p>
                         ))
                     :null}
 
-                    { selectColor == 'grey' ?
+                    { selectColor === 'grey' ?
                         grey_colors.map((color, i) => (
                             <p 
-                            className= {i == isActive.activeIndex ? "active" : "inactive"}
+                            key = {color.hex}
+                            className= {i === isActive.activeIndex ? "active" : "inactive"}
                             style={{backgroundColor: color.hex}}
                             onClick = {e => setIsActive({activeIndex: i})}
                             ></p>
                         ))
                     :null}
 
-                    { selectColor == 'brown' ?
+                    { selectColor === 'brown' ?
                         brown_colors.map((color, i) => (
                             <p 
-                            className= {i == isActive.activeIndex ? "active" : "inactive"}
+                            key = {color.hex}
+                            className= {i === isActive.activeIndex ? "active" : "inactive"}
                             style={{backgroundColor: color.hex}}
                             onClick = {e => setIsActive({activeIndex: i})}
                             ></p>
