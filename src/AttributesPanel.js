@@ -61,7 +61,7 @@ export default function AttributesPanel() {
 
         function getSize(e){
             
-            console.log(e.value, e.label)
+            // console.log(e.value, e.label)
             if (e.value === 'thickness') {
                 setActiveClass({ ...activeClass, panel_thickness: e.label });
             }
@@ -93,8 +93,8 @@ export default function AttributesPanel() {
             })
             
             //console.log(userInputs)
-            
-        }, [activeClass, setUserInputs, userInputs])
+            // eslint-disable-next-line
+        }, [activeClass])
 
         const customStyles = {
             option: (provided, state) => ({
