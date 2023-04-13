@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 
 export default function PricingPanel() {
     
-    const {userInputs, setUserInputs} = useContext(userInputContext)
+    const {userInputs} = useContext(userInputContext)
 
     // get inputs - name and email
     const inputValuesRef = useRef();
@@ -114,8 +114,6 @@ export default function PricingPanel() {
 
         if (userInputs.panel_finish === 'Solid (HDPE)' || userInputs.panel_finish === 'Metallic (HDPE)'){
             price_temp = price_temp - 1
-        } else{
-            price_temp = price_temp
         }
         return price_temp
     }
@@ -170,7 +168,7 @@ export default function PricingPanel() {
         setPrice(price_temp)
 
         console.log(userInputs)
-
+// eslint-disable-next-line
     }, [userInputs])
 
 
@@ -178,7 +176,7 @@ export default function PricingPanel() {
         <div className="left-panel panel">
         
             <div className="logo-container">
-                <img src='./logo.png'/>
+                <img src='./logo.png' alt='logo'/>
             </div>
             <div className="pricing-container">
                 <p className="price">$ 
@@ -196,4 +194,3 @@ export default function PricingPanel() {
         </div>
     )
 }
-

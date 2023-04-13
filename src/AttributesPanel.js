@@ -94,7 +94,7 @@ export default function AttributesPanel() {
             
             //console.log(userInputs)
             
-        }, [activeClass])
+        }, [activeClass, setUserInputs, userInputs])
 
         const customStyles = {
             option: (provided, state) => ({
@@ -208,4 +208,3 @@ export default function AttributesPanel() {
 </div>
     )
 }
-
